@@ -31,13 +31,13 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
     Route::post('/aitools', [AitoolsController::class, 'store'])->name('aitools.store');
-    Route::patch('/aitools/{aitool}', [AitoolsController::class, 'update'])->name('aitools.update');
+    Route::put('/aitools/{aitool}', [AitoolsController::class, 'update'])->name('aitools.update');
     Route::get('/aitools/create', [AitoolsController::class, 'create'])->name('aitools.create');
     Route::get('/aitools/{aitool}/edit', [AitoolsController::class, 'edit'])->name('aitools.edit');
     Route::delete('/aitools/{aitool}', [AitoolsController::class, 'destroy'])->name('aitools.destroy');
 
     Route::post('/categories', [CategoriesController::class, 'store'])->name('categories.store');
-    Route::patch('/categories/{category}', [CategoriesController::class, 'update'])->name('categories.update');
+    Route::put('/categories/{category}', [CategoriesController::class, 'update'])->name('categories.update');
     Route::get('/categories/create', [CategoriesController::class, 'create'])->name('categories.create');
     Route::get('/categories/{aitool}/edit', [CategoriesController::class, 'edit'])->name('categories.edit');
     Route::delete('/categories/{aitool}', [CategoriesController::class, 'destroy'])->name('categories.destroy');
